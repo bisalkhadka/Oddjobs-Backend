@@ -1,0 +1,1044 @@
+{
+  "feature": {
+    "uri": "Comment.feature",
+    "description": "<feature description>",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Comment.feature",
+    "id": "<feature-name>;<scenario-name>",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "<Scenario Name>",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 5137,
+      "status": "undefined"
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 4000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 5,
+        "name": "Browse to website",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 6,
+        "name": "...",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 7,
+        "name": "...",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 5133000000
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/1.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Contactus.feature",
+    "description": "<feature description>",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Contactus.feature",
+    "id": "<feature-name>;<scenario-name>",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "<Scenario Name>",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 6486,
+      "status": "failed",
+      "exception": {
+        "name": "UnexpectedAlertOpenError",
+        "remoteStacktrace": "WebDriverError@chrome://marionette/content/error.js:175:5\nUnexpectedAlertOpenError@chrome://marionette/content/error.js:460:5\nGeckoDriver.prototype._handleUserPrompts@chrome://marionette/content/driver.js:3408:13\n"
+      }
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 5,
+        "name": "Browse to web site \"file:///D:/Oddjobs_Final/Oddjobs/Front%20End/contact.html\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:5"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1985000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 6,
+        "name": "user input Name \"Hope\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:88"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1054000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 7,
+        "name": "user input Email \"hope@1.com\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:9"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1051000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 8,
+        "name": "user input Phone \"9898989898\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:48"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1062000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 9,
+        "name": "user input Message \"Good work making this website\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:94"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1103000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 10,
+        "name": "click Submit button",
+        "match": {
+          "location": "step_definitions\\definitions.js:83"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 116000000
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "failed",
+          "duration": 115000000,
+          "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: Your message has been sent. We will respond to you soon\n    at Object.throwDecodedError (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:563:13)\n    at Executor.execute (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:489:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/2.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Login.feature",
+    "description": "<feature description>",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Login.feature",
+    "id": "<feature-name>;pass-test",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "Pass test",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 2868,
+      "status": "failed",
+      "exception": {
+        "name": "UnexpectedAlertOpenError",
+        "remoteStacktrace": "WebDriverError@chrome://marionette/content/error.js:175:5\nUnexpectedAlertOpenError@chrome://marionette/content/error.js:460:5\nGeckoDriver.prototype._handleUserPrompts@chrome://marionette/content/driver.js:3408:13\n"
+      }
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 5,
+        "name": "Browse to web site \"file:///D:/Oddjobs_Final/Oddjobs/Front%20End/login.html\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:5"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 540000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 6,
+        "name": "user input Email \"manish@gmail.com\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:9"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1075000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 7,
+        "name": "user input Password \"123\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:15"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1071000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 8,
+        "name": "click Login button",
+        "match": {
+          "location": "step_definitions\\definitions.js:20"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 43000000
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "failed",
+          "duration": 139000000,
+          "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: Invalid Login\n    at Object.throwDecodedError (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:563:13)\n    at Executor.execute (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:489:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/3.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}{
+  "scenario": {
+    "uri": "Login.feature",
+    "id": "<feature-name>;fail-test-(wrong-info)",
+    "keyword": "Scenario",
+    "line": 10,
+    "name": "Fail test (wrong info)",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 2432,
+      "status": "failed",
+      "exception": {
+        "name": "UnexpectedAlertOpenError",
+        "remoteStacktrace": "WebDriverError@chrome://marionette/content/error.js:175:5\nUnexpectedAlertOpenError@chrome://marionette/content/error.js:460:5\nGeckoDriver.prototype._handleUserPrompts@chrome://marionette/content/driver.js:3408:13\n"
+      }
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 11,
+        "name": "Browse to web site \"file:///D:/Oddjobs_Final/Oddjobs/Front%20End/login.html\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:5"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 128000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 12,
+        "name": "user input Email \"asdadsf@asdf.com\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:9"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1071000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 13,
+        "name": "user input Password \"111\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:15"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1055000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 14,
+        "name": "click Login button",
+        "match": {
+          "location": "step_definitions\\definitions.js:20"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 52000000
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "failed",
+          "duration": 126000000,
+          "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: Invalid Login\n    at Object.throwDecodedError (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:563:13)\n    at Executor.execute (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:489:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/4.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Postjobs.feature",
+    "description": "<feature description>",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Postjobs.feature",
+    "id": "<feature-name>;<scenario-name>",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "<Scenario Name>",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 1769,
+      "status": "failed",
+      "exception": {
+        "name": "UnexpectedAlertOpenError",
+        "remoteStacktrace": "WebDriverError@chrome://marionette/content/error.js:175:5\nUnexpectedAlertOpenError@chrome://marionette/content/error.js:460:5\nGeckoDriver.prototype._handleUserPrompts@chrome://marionette/content/driver.js:3408:13\n"
+      }
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 5,
+        "name": "Browse to web site \"file:///D:/Oddjobs_Final/Oddjobs/Front%20End/addjobs.html\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:5"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 558000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 6,
+        "name": "user input Title \"ever\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:100"
+        },
+        "result": {
+          "status": "failed",
+          "duration": 1061000000,
+          "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: undefined\n    at Object.throwDecodedError (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:563:13)\n    at Executor.execute (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:489:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 7,
+        "name": "user input Description \"For\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:106"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 8,
+        "name": "user input Latitude \"444\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:112"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 9,
+        "name": "user input Category \"\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:119"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 10,
+        "name": "user input Type \"\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:125"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 11,
+        "name": "user input fileToUpload \"\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:130"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 12,
+        "name": "user input Location \"Here\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:136"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 13,
+        "name": "user input Longitude \"888\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:142"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 14,
+        "name": "user input JobDt \"11/18/2019\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:148"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 15,
+        "name": "user input Email \"asd@asd.com\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:9"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 16,
+        "name": "click Submit button",
+        "match": {
+          "location": "step_definitions\\definitions.js:83"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 150000000
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/5.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Register.feature",
+    "description": "<feature description>",
+    "keyword": "Feature",
+    "name": "Register",
+    "line": 1,
+    "id": "register",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Register.feature",
+    "id": "register;<scenario-name>",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "<Scenario Name>",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 9398,
+      "status": "failed",
+      "exception": {
+        "name": "UnexpectedAlertOpenError",
+        "remoteStacktrace": "WebDriverError@chrome://marionette/content/error.js:175:5\nUnexpectedAlertOpenError@chrome://marionette/content/error.js:460:5\nGeckoDriver.prototype._handleUserPrompts@chrome://marionette/content/driver.js:3408:13\n"
+      }
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 5,
+        "name": "Browse to web site \"file:///D:/Oddjobs_Final/Oddjobs/Front%20End/signup.html\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:5"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 768000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 6,
+        "name": "user input Firstname \"GG\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:25"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1063000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 7,
+        "name": "user input Username \"GW\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:31"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1064000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 8,
+        "name": "user input Address \"Da\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:37"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1062000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 9,
+        "name": "user input Password \"555\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:15"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1047000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 10,
+        "name": "user input Lastname \"WP\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:42"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1051000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 11,
+        "name": "user input Email \"GW@gmail.com\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:9"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1065000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 12,
+        "name": "user input Phone \"8888\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:48"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1053000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 13,
+        "name": "user input Confpassword \"555\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:54"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 1051000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 14,
+        "name": "click register button",
+        "match": {
+          "location": "step_definitions\\definitions.js:60"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 59000000
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "failed",
+          "duration": 115000000,
+          "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: User Registered Successfully\n    at Object.throwDecodedError (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:563:13)\n    at Executor.execute (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:489:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/6.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Review.feature",
+    "description": "<feature description>",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Review.feature",
+    "id": "<feature-name>;<scenario-name>",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "<Scenario Name>",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 261,
+      "status": "undefined"
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 5,
+        "name": "...",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 6,
+        "name": "...",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 7,
+        "name": "...",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 261000000
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/7.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Uploadresume.feature",
+    "description": "<feature description>",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Uploadresume.feature",
+    "id": "<feature-name>;<scenario-name>",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "<Scenario Name>",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 1639,
+      "status": "failed",
+      "exception": {
+        "name": "UnexpectedAlertOpenError",
+        "remoteStacktrace": "WebDriverError@chrome://marionette/content/error.js:175:5\nUnexpectedAlertOpenError@chrome://marionette/content/error.js:460:5\nGeckoDriver.prototype._handleUserPrompts@chrome://marionette/content/driver.js:3408:13\n"
+      }
+    },
+    "steps": [
+      {
+        "keyword": "Before",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:7"
+        },
+        "result": {
+          "status": "passed"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 5,
+        "name": "Browse to web site \"file:///D:/Oddjobs_Final/Oddjobs/Front%20End/upload.html?id=5dbe58cd9eac5036acbaba4f\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:5"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 435000000
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "When ",
+        "line": 6,
+        "name": "user input Username \"GW\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:31"
+        },
+        "result": {
+          "status": "failed",
+          "duration": 1063000000,
+          "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: undefined\n    at Object.throwDecodedError (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:563:13)\n    at Executor.execute (C:\\Users\\yumas\\Desktop\\bdd\\BDD\\node_modules\\selenium-webdriver\\lib\\http.js:489:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 7,
+        "name": "user input Email \"GW@gmail.com\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:9"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 8,
+        "name": "user input Education \"+2\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:65"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 9,
+        "name": "user input Qualification \"Bachelors\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:71"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "And ",
+        "line": 10,
+        "name": "user input Experience \"22 years\"",
+        "match": {
+          "location": "step_definitions\\definitions.js:77"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 11,
+        "name": "click Submit button",
+        "match": {
+          "location": "step_definitions\\definitions.js:83"
+        },
+        "result": {
+          "status": "skipped"
+        }
+      },
+      {
+        "keyword": "After",
+        "hidden": true,
+        "match": {
+          "location": "support\\hooks.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 141000000
+        },
+        "embeddings": [
+          {
+            "data": "file://BDD__report/8.png",
+            "mime_type": "image/png"
+          }
+        ]
+      }
+    ]
+  }
+}
