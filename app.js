@@ -5,32 +5,25 @@ const bodyParser = require('body-parser');
 const auth = require('./middleware/auth');
 const mongoose = require('./db/database');
 const multer = require('multer');
-
 const path = require('path');
 const app = express();
 const async=require('async'); 
-
 app.use(cors());
 app.use(express.static(path.join(__dirname,'JobsImages')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json()); 
-
-
 const User = require('./model/User');
 const Contact=require("./model/Contact");
 const Addjob=require("./model/Addjob");
 const CV=require("./model/CV");
 const Rate=require("./model/Rate")
 const Comment=require("./model/Comment");
-
-
 const middleware = require('./middleware/middleware');
  require('./db/database');
-app.get("/test11", middleware, function(req, res){
-    console.log("this should load after the middleware");
-   
-    })
 
+ app.get("/test11", middleware, function(req, res){
+    console.log("this should load after the middleware");
+    })
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
@@ -44,8 +37,7 @@ app.post('/register', (req, res) => {
     var mydata = new User(req.body);
     mydata.save().then(function (data) {
         // console.log(maadey);
-        // res.send(data);
-        res.json("Registered")
+        res.send(data);
  }).catch(function (e) {
       res.send(e);
     
@@ -54,13 +46,10 @@ app.post('/register', (req, res) => {
 });
 
 // -------------------//==============---------------------------------//
-
 // ==============To view users by admin===============================//
-
 app.get('/users', function (req, res) {
     User.find().then(function (user) {
-        // res.send(user);
-        res.json("Users shown")
+        res.send(user);
     }).catch(function (e) {
         res.send(e)
     });
@@ -95,13 +84,11 @@ app.post('/login', async function(req, res){
     else{
         res.send(user)
     }
-    //res.json("Logged in");
    })
 
-   app.get('/user/me',function(req,res) //add auth
+   app.get('/user/me',auth,function(req,res)
    {  
-    //    res.send(req.user);
-    res.json("Users")
+       res.send(req.user);
    })
 
 // ------------------------------------------------
@@ -110,74 +97,46 @@ app.post('/login', async function(req, res){
 
 // -------------To update user profile------------------------//
 
-app.put('/profileupdate', function (req, res) {   //add auth update product
-    console.log(req.body);
+app.put('/profileupdate',auth, function (req, res) {   //update product
     User.findByIdAndUpdate(req.body.id, req.body, { new: true }, (err, notes) => {
-    //   res.send("succesfull");
-    res.json("Profile Updated")
+      res.send("succesfull");
     });
   });
 
 //   ================================//===============//==================================================//
 
-
 // To post contact message 
-
 app.post('/contact', (req, res) => {
-    console.log(req.body);
     var mydata = new Contact(req.body);
     mydata.save().then(function (data) {
         //alert(Success)
-        // res.send(data);
-        res.json("Message Sent to the Admin")
+        res.send(data);
  }).catch(function (e) {
       res.send(e);
-    
-
-    });
-});
-
-
-
-
+    });});
 // ============================================//===========================================================
-
-
-
-
 //  To view contact details to admin
-
 app.get('/contactdetails', function (req, res) {
     Contact.find().then(function (Contact) {
-        //res.send(Contact);
-        res.json("Message sent.")
+        res.send(Contact);
     }).catch(function (e) {
         res.send(e) 
-    });
-
-});
-
-// ===========================================================//======================================
-
+    });});
 // ===================To delete contacts by admin===============//=/===========================//
-
 app.delete('/contactdelete/:id',function(req,res){
     uid=req.params.id.toString();
     Contact.findByIdAndDelete(uid).then(function(){
         res.send({message:"success"})
     })
   })
-
 // =================//========================//=================================//====================//
 // To post job by user
 
-app.post('/addjob', (req, res) => {
-    console.log(req.body);
+app.post('/addjobs', (req, res) => {
     var mydata = new Addjob(req.body);
     mydata.save().then(function (data) {
         //alert(Success)
-        // res.send(data);
-     res.json("Job Posted")
+        res.send(data);
  }).catch(function (e) {
       res.send(e);
     
@@ -191,8 +150,7 @@ app.post('/addjob', (req, res) => {
 
 app.get('/showjobs', function (req, res) {
     Addjob.find().then(function (Addjob) {
-       res.send(Addjob);
-       //res.json("Browse the jobs.")
+        res.send(Addjob);
     }).catch(function (e) {
         res.send(e)
     });
@@ -203,13 +161,10 @@ app.get('/showjobs', function (req, res) {
 
 
 // ====================//=================To show job details by id to user============================================//
-
 app.get('/jobdetails/:id', function (req, res) {
     uid=req.params.id.toString();
     Addjob.find({_id:uid}).then(function (addjob) {
-        console.log(addjob)
-        res.json //REMOVE THIS AFTER TEST.
-        ({
+        res.json({
             add:addjob.map(add=>{
                 return{
                     _id:add._id,
@@ -224,14 +179,12 @@ app.get('/jobdetails/:id', function (req, res) {
                     Email:add.Email,    
                     userid:add.userid,
                     fileToUpload:add.fileToUpload
-           
                 }
             })
         });
     }).catch(function (e) {                        
         res.send(e)
-    });
-});
+    });});
 
 // ===============//================================//===========================//==========================//
 
@@ -239,19 +192,15 @@ app.get('/jobdetails/:id', function (req, res) {
 
 app.get('/addjobs', function (req, res) {
     Addjob.find().then(function (Addjob) {
-        // res.send(Addjob);
-        res.json("Job added.")
+        res.send(Addjob);
     }).catch(function (e) {
         res.send(e)
     });
 
 });
-
-
 // ========================================//===================================//=============================================
 
 // =============//=========To delete job details by admin===========================================//
-
 app.delete('/jobdelete/:id',function(req,res){
     uid=req.params.id.toString();
     Addjob.findByIdAndDelete(uid).then(function(){
@@ -264,8 +213,6 @@ app.delete('/jobdelete/:id',function(req,res){
 
 app.post('/approvejobs/:id',function(req,res){
     uid=req.params.id.toString();
-
-    console.log(uid);
     Addjob.findByIdAndUpdate(uid,{$set:{status:"approved"}}).then(function(){
         res.send({message:"success"})
     })
@@ -300,7 +247,6 @@ var upload = multer({
     limits: { fileSize: 1000000 }
 });
 
-
     app.post('/uploadImg', upload.single('imageFile'), (req, res) => {
        res.send(req.file)
     });
@@ -323,25 +269,14 @@ app.post('/users/logout', auth, async (req, res) => {
     }
    }) 
 
-//    ===============================//================================//=================================================
 
-//  To upload cv
-
-
-
-// ======================To choose and upload cv===========================================//
-   
-
-    // ==================================//=====================================//=========//
-
-    
 
     // ==================To view CV send by user with details ================================================//
 
    app.get('/cv/:id', function (req, res) {
     uid=req.params.id.toString();
     CV.find({_id:uid}).then(function (cv) {
-        console.log(cv)//remove res.json
+        console.log(cv)
         res.json({
             cov:cv.map(cov=>{
                 return{
@@ -351,7 +286,6 @@ app.post('/users/logout', auth, async (req, res) => {
                 }
             })
         });
-        // res.json("CV received.")
     }).catch(function (e) {                        
         res.send(e)
     });
@@ -361,12 +295,10 @@ app.post('/users/logout', auth, async (req, res) => {
 // ====================To add cv along with other information===========================//
 
 app.post('/addcv', (req, res) => {
-    console.log(req.body);
     var mydata = new CV(req.body);
     mydata.save().then(function (data) {
         //alert(Success)
-        // res.send(data);
-        res.json("Your application is sent.")
+        res.send(data);
  }).catch(function (e) {
       res.send(e);
     
@@ -381,8 +313,7 @@ app.post('/addcv', (req, res) => {
         .populate('jid')
         .exec() 
         .then(function (cv) {
-    //  res.send(cv)
-    res.json("Application sent.")
+     res.send(cv)
            }
         ).catch(function (e) {
             res.send(e)
@@ -395,8 +326,6 @@ app.post('/addcv', (req, res) => {
 
 //------------------rate job--------------------//
 app.post('/jobrating', auth, function (req, res) {
-    console.log(req.body)
-
    Rate.findOne({ jid: req.body.jid, userid: req.body.userid }).then(function (rate) {
       
       if (rate) {
@@ -414,7 +343,7 @@ app.post('/jobrating', auth, function (req, res) {
         }
         const ratejob = new Rate(data);
         ratejob.save().then(function () {
-          console.log('success');
+          res.send('success');
         })
       }
     })
@@ -422,11 +351,14 @@ app.post('/jobrating', auth, function (req, res) {
   //==============
   // Comment
   app.post('/comments',(req,res)=>{
-      console.log(req.body);
-    Comment.find({JobID: req.params.id},function(err,comment){
-      if (err) return callback(err);
-      res.json(comment);
-    });
+      const comment=new Comment(req.body);
+      comment.save().then(function () {
+        res.json(comment);
+      });
+    // Comment.find({JobID: req.params.id},function(err,comment){
+    //   if (err) return callback(err);
+    //   res.json(comment);
+    // });
   });
   app.get('/jobreview/:id', (req, res) => {
       Comment.find({JobID: req.params.id})

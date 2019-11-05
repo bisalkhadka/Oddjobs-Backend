@@ -1,43 +1,30 @@
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken')
 const userSchema = new mongoose.Schema({
-
         Firstname: { // column name
             type: String   //data type String
-        },
-        Lastname: { // column name
+        },Lastname: { // column name
             type: String   //data type String
-        },
-        Email: { // column name
+        },Email: { // column name
             type: String  //data type String
-        },
-        Username: { // column name
+        }, Username: { // column name
             type: String   //data type String
-        },
-        Address: {  // column name
+        },Address: {  // column name
             type: String  //data type Number
-        },
-        Phone: {  // column name
+        },Phone: {  // column name
             type: String  //data type Number
-        },
-        Password: {  // column name
+        },Password: {  // column name
             type: String  //data type Number
-        },
-        Confpassword: {  // column name
+        },Confpassword: {  // column name
             type: String  //data type Number
-        },
-        usertype:{
+        },usertype:{
             type: String,
             default:'user'
-        },
-        status:{
+        },status:{
             type:String
-        },
-        tokens:[{token: {type:String}}]
+        },tokens:[{token: {type:String}}]
+        })
        
-    })
-
-   
         userSchema.statics.checkCrediantialsDb = async (user22, pass) =>{
 
             const user1 = await user.findOne({Email : user22, Password : pass})
