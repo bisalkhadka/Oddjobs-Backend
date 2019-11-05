@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const CVSchema = new mongoose.Schema({
-
     Username: { // column name
         type: String   //data type String
     },
@@ -10,14 +9,12 @@ const CVSchema = new mongoose.Schema({
     Education:{
         type:String
     },
-    
     Qualifications: { // column name
         type: String   //data type String
     },
     Experience:{
         type:String
     },
-  
     jid:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Addjob',
@@ -27,9 +24,7 @@ const CVSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user',
         required: true
-     }
-    
-
+     }  
 })
           
 const CV= mongoose.model('CV',CVSchema)  
